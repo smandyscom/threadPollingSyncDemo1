@@ -20,13 +20,14 @@ namespace thread_demo
 
             int outValue = 0;
             //the main state machine
+            Program.method();
             while (state != 500)
             {
                 switch (state)
                 {
                     case 0:
                         // use Task 
-                        __task = new Task(new Action(method));
+                        __task = new Task(new Action(Program.method));
                         __task.Start();
                         state +=10;
                         break;
@@ -38,7 +39,7 @@ namespace thread_demo
                     case 20:
                         // use thread pool
                         ThreadPool.QueueUserWorkItem((object foo)=>{
-                            method();
+                            Program.method();
                             exchange.Enqueue(0); // enqueue some meaningfll result
                         },null);
                         state+=10;
@@ -65,14 +66,14 @@ namespace thread_demo
                     default:
                         break;
                 }
-            }
-            Console.WriteLine("");
+                Thread.Sleep(0);// yield to other thread to run
+            }//while
         }
 
         static void method()
         {
             //reflect the current thread
-            Console.WriteLine(System.Threading.Thread.CurrentThread.Name);
+            Console.WriteLine(System.Threading.Thread.CurrentThread.ManagedThreadId.ToString());
         }
 
     }
