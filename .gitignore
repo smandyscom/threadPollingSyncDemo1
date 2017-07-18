@@ -1,0 +1,13 @@
+obj/thread_demo.csproj.nuget.g.targets
+bin/Debug/netcoreapp1.1/thread_demo.deps.json
+bin/Debug/netcoreapp1.1/thread_demo.dll
+bin/Debug/netcoreapp1.1/thread_demo.pdb
+bin/Debug/netcoreapp1.1/thread_demo.runtimeconfig.dev.json
+bin/Debug/netcoreapp1.1/thread_demo.runtimeconfig.json
+obj/project.assets.json
+obj/thread_demo.csproj.nuget.g.props
+obj/Debug/netcoreapp1.1/CoreCompileInputs.cache
+obj/Debug/netcoreapp1.1/thread_demo.AssemblyInfo.cs
+obj/Debug/netcoreapp1.1/thread_demo.csproj.FileListAbsolute.txt
+obj/Debug/netcoreapp1.1/thread_demo.dll
+obj/Debug/netcoreapp1.1/thread_demo.pdb
